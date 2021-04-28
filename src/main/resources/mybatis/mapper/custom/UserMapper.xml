@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greenleaf.fruitshop.model.mapper.UserMapper">
+    <insert id="insertUser"  keyColumn="user_id" keyProperty="userId" useGeneratedKeys="true" parameterType="com.greenleaf.fruitshop.model.entity.UserRole">
+        INSERT INTO `user` (`username`, `nickname`, `password`, `gender`, `email`, `phone`, `location`, `detail_address`, `identity`, `active`, `updated`, `created`) VALUES (#{username}, #{nickname}, #{password}, #{gender}, #{email},#{phone}, #{location}, #{detailAddress}, #{identity}, #{active}, now(),now())
+    </insert>
+</mapper>

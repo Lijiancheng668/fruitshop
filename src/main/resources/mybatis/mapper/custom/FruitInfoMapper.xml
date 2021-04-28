@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greenleaf.fruitshop.model.mapper.FruitInfoMapper">
+    <insert id="insertFruitInfo"  keyColumn="fruit_id" keyProperty="fruitId" useGeneratedKeys="true" parameterType="com.greenleaf.fruitshop.model.entity.FruitInfo">
+        INSERT INTO `fruit_info` (`fruit_category_id`, `store_id`, `name`, `outline`, `detail`,  `price`,   `market_price`, `member_price`, `deal_mount`, `image_url`, `store_mount`, `store_time`, `pack_style`, `is_shelf`,`place`) VALUES (#{fruitCategoryId}, #{storeId}, #{name}, #{outline}, #{detail}, #{price}, #{marketPrice}, #{memberPrice}, #{dealMount}, #{imageUrl}, #{storeMount}, #{storeTime}, #{packStyle}, #{isShelf},#{place})
+    </insert>
+</mapper>
